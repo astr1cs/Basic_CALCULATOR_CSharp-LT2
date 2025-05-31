@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            panel1 = new Panel();
+            smallPanel = new Panel();
             panel2 = new Panel();
+            panel1Label = new Label();
             button19 = new Button();
             button16 = new Button();
             button17 = new Button();
@@ -49,22 +50,33 @@
             button1 = new Button();
             button2 = new Button();
             button3 = new Button();
+            panel2.SuspendLayout();
             SuspendLayout();
             // 
-            // panel1
+            // smallPanel
             // 
-            panel1.AccessibleName = "smallPanel";
-            panel1.Location = new Point(0, 0);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(302, 28);
-            panel1.TabIndex = 0;
+            smallPanel.AccessibleName = "";
+            smallPanel.Location = new Point(0, 0);
+            smallPanel.Name = "smallPanel";
+            smallPanel.Size = new Size(302, 28);
+            smallPanel.TabIndex = 0;
             // 
             // panel2
             // 
+            panel2.Controls.Add(panel1Label);
             panel2.Location = new Point(0, 34);
             panel2.Name = "panel2";
             panel2.Size = new Size(302, 65);
             panel2.TabIndex = 1;
+            // 
+            // panel1Label
+            // 
+            panel1Label.AutoSize = true;
+            panel1Label.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            panel1Label.Location = new Point(258, 14);
+            panel1Label.Name = "panel1Label";
+            panel1Label.Size = new Size(0, 37);
+            panel1Label.TabIndex = 0;
             // 
             // button19
             // 
@@ -77,6 +89,7 @@
             button19.TabIndex = 21;
             button19.Text = "0";
             button19.UseVisualStyleBackColor = false;
+            button19.Click += button19_Click;
             // 
             // button16
             // 
@@ -89,6 +102,7 @@
             button16.TabIndex = 22;
             button16.Text = "00";
             button16.UseVisualStyleBackColor = false;
+            button16.Click += button16_Click;
             // 
             // button17
             // 
@@ -101,6 +115,7 @@
             button17.TabIndex = 24;
             button17.Text = "=";
             button17.UseVisualStyleBackColor = false;
+            button17.Click += button17_Click;
             // 
             // button18
             // 
@@ -113,6 +128,7 @@
             button18.TabIndex = 23;
             button18.Text = ".";
             button18.UseVisualStyleBackColor = false;
+            button18.Click += button18_Click;
             // 
             // button20
             // 
@@ -125,6 +141,7 @@
             button20.TabIndex = 28;
             button20.Text = "+";
             button20.UseVisualStyleBackColor = false;
+            button20.Click += button20_Click;
             // 
             // button21
             // 
@@ -137,6 +154,7 @@
             button21.TabIndex = 27;
             button21.Text = "3";
             button21.UseVisualStyleBackColor = false;
+            button21.Click += button21_Click;
             // 
             // button22
             // 
@@ -149,6 +167,7 @@
             button22.TabIndex = 26;
             button22.Text = "2";
             button22.UseVisualStyleBackColor = false;
+            button22.Click += button22_Click;
             // 
             // button23
             // 
@@ -161,6 +180,7 @@
             button23.TabIndex = 25;
             button23.Text = "1";
             button23.UseVisualStyleBackColor = false;
+            button23.Click += button23_Click;
             // 
             // button4
             // 
@@ -173,6 +193,7 @@
             button4.TabIndex = 36;
             button4.Text = "*";
             button4.UseVisualStyleBackColor = false;
+            button4.Click += button4_Click;
             // 
             // button5
             // 
@@ -185,6 +206,7 @@
             button5.TabIndex = 35;
             button5.Text = "9";
             button5.UseVisualStyleBackColor = false;
+            button5.Click += button5_Click;
             // 
             // button6
             // 
@@ -197,6 +219,7 @@
             button6.TabIndex = 34;
             button6.Text = "8";
             button6.UseVisualStyleBackColor = false;
+            button6.Click += button6_Click;
             // 
             // button7
             // 
@@ -209,7 +232,7 @@
             button7.TabIndex = 33;
             button7.Text = "7";
             button7.UseVisualStyleBackColor = false;
-            button7.Click += this.button7_Click;
+            button7.Click += button7_Click;
             // 
             // button8
             // 
@@ -222,6 +245,7 @@
             button8.TabIndex = 32;
             button8.Text = "-";
             button8.UseVisualStyleBackColor = false;
+            button8.Click += button8_Click;
             // 
             // button9
             // 
@@ -234,6 +258,7 @@
             button9.TabIndex = 31;
             button9.Text = "6";
             button9.UseVisualStyleBackColor = false;
+            button9.Click += button9_Click;
             // 
             // button10
             // 
@@ -246,6 +271,7 @@
             button10.TabIndex = 30;
             button10.Text = "5";
             button10.UseVisualStyleBackColor = false;
+            button10.Click += button10_Click;
             // 
             // button11
             // 
@@ -258,6 +284,7 @@
             button11.TabIndex = 29;
             button11.Text = "4";
             button11.UseVisualStyleBackColor = false;
+            button11.Click += button11_Click;
             // 
             // button1
             // 
@@ -270,6 +297,7 @@
             button1.TabIndex = 39;
             button1.Text = "/";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // button2
             // 
@@ -282,6 +310,7 @@
             button2.TabIndex = 38;
             button2.Text = "%";
             button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // button3
             // 
@@ -294,6 +323,7 @@
             button3.TabIndex = 37;
             button3.Text = "AC";
             button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
             // 
             // Calculator
             // 
@@ -320,16 +350,17 @@
             Controls.Add(button16);
             Controls.Add(button19);
             Controls.Add(panel2);
-            Controls.Add(panel1);
+            Controls.Add(smallPanel);
             Name = "Calculator";
-            Text = "Form1";
-            Load += this.Calculator_Load_1;
+            Text = "Calculator";
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private Panel panel1;
+        private Panel smallPanel;
         private Panel panel2;
         private Button button19;
         private Button button16;
@@ -350,5 +381,6 @@
         private Button button1;
         private Button button2;
         private Button button3;
+        private Label panel1Label;
     }
 }
