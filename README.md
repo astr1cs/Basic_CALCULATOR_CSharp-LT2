@@ -13,7 +13,7 @@ A lightweight, user-friendly desktop calculator built with C#. This app supports
 - Responsive layout for better usability
 - Lightweight and fast
 
-![Calculator Screenshot](assets/Screenshot_2.png)
+![Calculator Screenshot](Calculator/Calculator/assets/Screenshot_2.png)
 
 ### Installation
 
