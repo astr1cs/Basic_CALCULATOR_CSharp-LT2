@@ -15,8 +15,3 @@ A lightweight, user-friendly desktop calculator built with C#. This app supports
 
 ![Calculator Screenshot](Calculator/Calculator/assets/Screenshot_2.png)
 
-### Installation
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/desktop-calculator.git
